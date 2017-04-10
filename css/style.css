@@ -14,19 +14,80 @@ body{
 	margin: 0;
 	background: #293449;
 }
+.logo {
+	float: left;
+	width: 168px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 52px;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 24px;
+	background: #ee3643;
+	color: #ffffff;
+}
+.Order-menu .logo{
+	position: absolute;
+}
+.search {
+	float: left;
+	width: 270px;
+	margin-left: 220px;
+	padding-left: 49px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-right: 0;
+	border: none;
+	font-family: 'Cuprum', sans-serif;
+	font-size: 17px;
+	line-height: 18px;
+	background: #293449;
+}
+.search::-webkit-input-placeholder {
+	color: #ffffff;
+}
+.search:hover,
+.Order-menu a:hover {
+	background: #212a3a;
+}
+.search:focus {
+	background: #ffffff;
+	outline-color: #ffffff;
+}
+.search:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+.Order-menu ul{
+	float: left;
+	width: 450px;
+}
 .Order-menu li{
+	float: left;
 	list-style: none;
-	padding: 10px 0 10px;
-	font-size: 17px;	
+}
+.Order-menu a{
+	display: block;
+	width: 150px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	line-height: 18px;
+	text-align: center;
+	color: #ffffff;
+}
+.Order-menu a:active {
+	opacity: 0.4;
+}
+.Order-menu li:last-child a{
+	background: #63a63e;
+}
+.Order-menu li:last-child a:hover{
+	background: #5fbb2d;
+}
+.Order-menu li:last-child a:active {
+	background: #518534;
 }
 a{
 	text-decoration: none;
-}
-.Order-menu-float-l{
-	float: left;
-}
-.Order-menu-float-r{
-	float: right;
 }
 .fixclear::after{
 	content: "";
@@ -222,7 +283,11 @@ a{
 .products-items div:last-child {
 	margin-right: 0;
 }
+.goods:last-child{
+	background: url("../img/new.png") no-repeat 100% 0;
+}
 .goods div{
+	display: flex;
 	height: 180px;
 	margin: 0;
 	border: none;	
@@ -230,9 +295,6 @@ a{
 .goods img {
 	display: block;
 	margin: auto;
-}
-.Manufacturers {
-	margin-top: 20px;
 }
 .goods h3 {
 	margin-bottom: 10px;
@@ -268,6 +330,9 @@ a{
 	background-image: linear-gradient(to right, #ee3643 121px, transparent 19px);
 	color: #ffffff;	
 }
+.goods:last-child .price{
+	margin-top: 38px;
+}
 .goods .price::after {
 	content: "";
 	position: absolute;
@@ -278,11 +343,15 @@ a{
 	border-top-color: transparent;
 	border-bottom-color: transparent;
 }
+.Manufacturers {
+	margin-top: 20px;
+}
 .Manufacturers-items {
 	margin-top: 20px;
 }
 .Manufacturers-items a {
 	float: left;
+	display: table;
 	width: 218px;
 	min-height: 145px;
 	margin-right: 20px;
@@ -298,6 +367,11 @@ a{
 .Manufacturers-items a:active {
 	box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
 	opacity: 0.3;
+}
+.Manufacturers-items div {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
 }
 .service {
 	margin-top: 133px;
@@ -452,17 +526,13 @@ a{
 	line-height: 24px;
 	color: #f1f5f7;
 }
-.footer-меню-first .logo {
-	float: left;
+.footer-main .logo {
 	width: 185px;
 	padding-top: 19px;
 	padding-bottom: 19px;
 	padding-left: 35px;
 	font-size: 30px;
-	font-weight: bold;
 	line-height: 30px;
-	background: #ee3643;
-	color: #ffffff;
 }
 .footer-меню-first ul,
 .footer-меню-second ul {
