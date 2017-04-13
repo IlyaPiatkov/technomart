@@ -212,17 +212,17 @@ a{
 	background: #f6b22d;
 }
 .services h2:first-of-type {
-	float: left;
+	display: block;
 	margin: 0;
-	padding-top: 23px;
+	padding-top: 22px;
 	padding-left: 23px;
-	padding-bottom: 13px;
+	padding-bottom: 11px;
 	font-size: 24px;
 	line-height: 30px;
 	font-weight: bold;
 }
 .services a:first-of-type {
-	float: left;
+	display: block;
 	width: 135px;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -245,28 +245,58 @@ a{
 .services a:first-of-type:active {
 	background: rgba(0, 0, 0, 0.3);
 }
-.services div div {
-	float: right;
-	margin: 0;
-	width: 125px;
-	min-height: 125px;
+.services-position-img {
+	position: relative;
 }
-.services-Materials div {
-	background: 
-		url(../img/jsdbf.png) no-repeat 50% 50%,
-		url(../img/new2.png) no-repeat 100% 0;
+.services-Materials::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60px;
+	height: 59px;
+	background: url("../img/sprites.png") no-repeat;
+	background-position: -141px -64px;
 }
-.services-instrument div {
-	background: url(../img/vcxv.png) no-repeat 50% 50%;
+.services-position-img::after {
+	content: "";
+	position: absolute;
+	background: url("../img/sprites.png") no-repeat;
 }
-.services-mechanism div {
-	background: url(../img/bvcbvb.png) no-repeat 50% 50%;
+.services-Materials::after {
+	top: 31px;
+	right: 43px;
+	width: 44px;
+	height: 65px;
+	background-position: 0 0;
 }
-.services-discounts div {
-	background: url(../img/qws.png) no-repeat 50% 50%;
+.services-instrument::after {
+	top: 33px;
+	right: 28px;
+	width: 75px;
+	height: 61px;
+	background-position: 0 -67px;
 }
-.services-delivery div {
-	background: url(../img/gf.png) no-repeat 50% 50%;
+.services-mechanism::after {
+	top: 31px;
+	right: 31px;
+	width: 78px;
+	height: 62px;
+	background-position: -132px 0;
+}
+.services-discounts::after {
+	top: 26px;
+	right: 45px;
+	width: 59px;
+	height: 72px;
+	background-position: -79px -67px;
+}
+.services-delivery::after {
+	top: 32px;
+	right: 31px;
+	width: 78px;
+	height: 63px;
+	background-position: -49px 0;
 }
 .products {
 	margin-top: 35px;
@@ -321,8 +351,20 @@ a{
 .products-items div:last-child {
 	margin-right: 0;
 }
-.goods:last-child{
-	background: url("../img/new.png") no-repeat 100% 0;
+
+.goods:last-child {
+	position: relative;
+}
+.goods:last-child::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60px;
+	height: 59px;
+	background-color: red;
+ 	background: url("../img/sprites.png") no-repeat;
+	background-position: -4px -132px;
 }
 .goods-img{
 	display: flex;
