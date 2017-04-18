@@ -1008,6 +1008,7 @@ a.login:hover::before {
 	background: #ee3643;
 }
 .modal-content {
+	display: none;
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -1031,4 +1032,35 @@ a.login:hover::before {
 .modal-content .modal-content-close {
 	top: 16px;
 	right: 10px;
+}
+.modal-content label {
+	display: block;
+	font-size: 18px;
+	line-height: 24px;
+}
+.form-name, .form-email {
+	float: left;
+	margin-top: 55px;
+}
+.form-name {	
+	margin-left: 80px;
+}
+.form-email {
+	margin-left: 20px;
+}
+.modal-content input[type="text"],
+.modal-content input[type="email"] {
+	width: 186px;
+	margin-top: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border: 2px solid #d7dcde;
+	border-radius: 3px;
+	font-size: 13px;
+	line-height: 18px;
+}
+.form-comment {
+	float: left;
 }
