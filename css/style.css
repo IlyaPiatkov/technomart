@@ -60,6 +60,15 @@ body{
 .search::-webkit-input-placeholder {
 	color: #ffffff;
 }
+.search::-moz-placeholder {
+	color: #ffffff;
+}
+.search:-moz-placeholder {
+	color: #ffffff;
+}
+.search:-ms-input-placeholder {
+	color: #ffffff;
+}
 .icon-search:hover::after {
 	opacity: 1;
 }
@@ -76,6 +85,15 @@ body{
 	outline-color: #ffffff;
 }
 .search:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+.search:focus::-moz-placeholder {
+	color: transparent;
+}
+.search:focus:-moz-placeholder {
+	color: transparent;
+}
+.search:focus:-ms-input-placeholder {
 	color: transparent;
 }
 .order-menu ul {
@@ -967,6 +985,9 @@ a.login:hover::before {
 	background: rgba(0, 0, 0, 0.5);
 	z-index: 10;
 }
+.modal-overlay-show {
+	display: block;
+}
 .modal-content-map {
 	display: none;
 	position: fixed;
@@ -978,6 +999,9 @@ a.login:hover::before {
 	height: 445px;
 	box-shadow: 0 0 16px 5px rgba(35, 31, 32, 0.5);
 	z-index: 20;
+}
+.modal-content-map-show {
+	display: block;
 }
 .modal-content-close {
 	position: absolute;
@@ -1020,6 +1044,9 @@ a.login:hover::before {
 	box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
 	z-index: 30;
 }
+.modal-content-show {
+	display: block;
+}
 .modal-content::before {
 	content: "";
 	position: absolute;
@@ -1038,18 +1065,21 @@ a.login:hover::before {
 	font-size: 18px;
 	line-height: 24px;
 }
-.form-name, .form-email {
-	float: left;
+.form-position {
+	margin-left: 80px;
 	margin-top: 55px;
 }
-.form-name {	
-	margin-left: 80px;
+.form-name,
+.form-email,
+.form-comment {
+	float: left;	
 }
 .form-email {
 	margin-left: 20px;
 }
 .modal-content input[type="text"],
-.modal-content input[type="email"] {
+.modal-content input[type="email"],
+.modal-content textarea[name="comment"] {
 	width: 186px;
 	margin-top: 5px;
 	padding-left: 15px;
@@ -1062,5 +1092,16 @@ a.login:hover::before {
 	line-height: 18px;
 }
 .form-comment {
-	float: left;
+	margin-top: 20px;
+}
+.form-comment textarea[name="comment"] {
+	min-width: 426px;
+	max-width: 426px;
+	min-height: 102px;
+	max-height: 102px;
+}
+.form-btn {
+	margin-top: 75px;
+	margin-left: 80px;
+	margin-right: 80px;
 }

@@ -215,7 +215,7 @@
 						<h2>КОНТАКТЫ</h2>
 						<p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
 						<a href="#" class="map-mini"><img src="img/map.jpg" width="300" height="160" alt="Карта"></a>
-						<a class="btn" href="#">Заблудились? Напишите нам!</a>
+						<a class="btn write-to-us" href="#">Заблудились? Напишите нам!</a>
 					</section>
 				</article>
 			</div>
@@ -271,20 +271,23 @@
 		<div class="modal-content">
 			<batton class="modal-content-close" type="batton" title="Закрить"></batton>
 			<form action="#" method="post">
-				<div class="form-name">
-					<label for="name">Ваше имя:</label>
-					<input type="text" name="name" id="name">
+				<div class="form-position fixclear">
+					<div class="form-name">
+						<label for="name">Ваше имя:</label>
+						<input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста">
+					</div>
+					<div class="form-email">
+						<label for="email">Ваш e-mail:</label>
+						<input type="email" name="email" id="email" placeholder="Для отправки ответа">
+					</div>
+					<div class="form-comment">
+						<label for="comment">Текст письма</label>
+						<textarea name="comment" id="comment" placeholder="В свободной форме"></textarea>
+					</div>
 				</div>
-				<div class="form-email">
-					<label for="email">Ваш e-mail:</label>
-					<input type="email" name="email" id="email">
-				</div>
-				<div class="form-comment">
-					<label for="comment">Текст письма</label>
-					<textarea name="comment" id="comment" rows="7"></textarea>
-				</div>
-				<a href="#" class="btn">ОТПРАВИТЬ</a>
+				<a href="#" class="btn form-btn">ОТПРАВИТЬ</a>
 			</form>
 		</div>
+	<script src="js/javascript.js"></script>
 	</body>
 	</html>
