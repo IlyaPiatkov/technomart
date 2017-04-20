@@ -360,6 +360,7 @@ a.login:hover::before {
 	position: absolute;
 	top: 0;
 	left: 0;
+	max-width: 100%;
 }
 .btn-slider {
 	position: absolute;
@@ -735,7 +736,8 @@ a.login:hover::before {
 	left: 150px;
 	width: 468px;
 	height: 261px;
-	background: url("../img/car.png") no-repeat;
+	background: url("../img/sprites.png") no-repeat;
+	background-position: 0 -630px;
 }
 .sub-menu .medal-img{
 	position: absolute;
@@ -743,7 +745,8 @@ a.login:hover::before {
 	left: 230px;
 	width: 389px;
 	height: 283px;
-	background: url("../img/medal.png") no-repeat;
+	background: url("../img/sprites.png") no-repeat;
+	background-position: 0 -57px;
 }
 .sub-menu .credit-img{
 	position: absolute;
@@ -751,7 +754,8 @@ a.login:hover::before {
 	left: 155px;
 	width: 465px;
 	height: 285px;
-	background: url("../img/credit.png") no-repeat;
+	background: url("../img/sprites.png") no-repeat;
+	background-position: 0 -341px;
 	z-index: 10;
 }
 .service-menu li:hover li{
@@ -837,9 +841,15 @@ a.login:hover::before {
 	margin-top: 40px;
 	margin-right: 0;
 }
-.footer-main {
+.footer-main-top {
 	margin-top: 86px;
-	background-image: linear-gradient(#32425c 65%, #293449 35%)
+	background: #32425c; 
+	padding-bottom: 50px;
+}
+.footer-main-bottom {
+	padding-top: 35px;
+	padding-bottom: 30px;
+	background: #293449;
 }
 .footer-main a,
 .footer-main p,
@@ -881,10 +891,6 @@ a.login:hover::before {
 }
 .footer-меню-second a {
 	color: #ffd180;
-}
-.footer-меню-third {
-	margin-top: 85px;
-	padding-bottom: 30px;
 }
 .footer-меню-third div {
 	float: left;
