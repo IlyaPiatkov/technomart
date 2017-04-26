@@ -353,9 +353,6 @@ a.login:hover::before {
 .btn-services:active {
 	background: rgba(0, 0, 0, 0.3);
 }
-.services-position-img {
-	position: relative;
-}
 .services-slider img{
 	position: absolute;
 	top: 0;
@@ -420,8 +417,7 @@ a.login:hover::before {
 	display: none;
 }
 /*new для товара*/
-.services-Materials::before,
-.goods:last-child::after {
+.new-img::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -504,12 +500,13 @@ a.login:hover::before {
 	margin-right: 20px;
 	border: 1px solid #e5e5e5;
 }
-.products-items div:last-child {
+.products-items .goods:last-child,
+.catalog-item .goods:nth-child(3n) {
 	margin-right: 0;
 }
-
-.goods:last-child {
+.goods {
 	position: relative;
+	min-height: 315px;
 }
 .goods-img{
 	display: flex;
@@ -610,7 +607,7 @@ a.login:hover::before {
 	background-image: linear-gradient(to right, #ee3643 121px, transparent 19px);
 	color: #ffffff;	
 }
-.goods:last-child .price{
+.goods h3 + .price{
 	margin-top: 38px;
 }
 .goods .price::after {
@@ -1110,4 +1107,197 @@ a.login:hover::before {
 	margin-top: 75px;
 	margin-left: 80px;
 	margin-right: 80px;
+}
+/*Сторінка каталогу*/
+.breadcrumbs {
+	margin-top: 80px;
+}
+.breadcrumbs ul {
+	margin: 0;
+	padding: 0;	
+}
+.breadcrumbs li {
+	position: relative;
+	display: inline-block;
+	padding-right: 38px;
+	list-style: none;
+}
+.breadcrumbs li::before {
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: -20px;
+	width: 1px;
+	height: 8px;
+	background: #c1c6ce;
+	transform: rotate(135deg);
+}
+.breadcrumbs li::after {
+	content: "";
+	position: absolute;
+	top: 9px;
+	left: -20px;
+	width: 1px;
+	height: 8px;
+	background: #c1c6ce;
+	transform: rotate(45deg);
+}
+.breadcrumbs li:first-child::before,
+.breadcrumbs li:first-child::after {
+	display: none;
+}
+.hyper-home {
+	display: block;
+	position: relative;
+	width: 15px;
+	height: 12px;
+	background: url("../img/sprites.png") no-repeat;
+	background-position: -63px -38px;	
+}
+.breadcrumbs a{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	color: #000000;
+}
+.style-h1 {
+	margin-top: 50px;
+	margin-left: 30px;
+	font-size: 30px;
+	line-height: 40px;
+	color: #32425c;
+}
+.catalog {
+	margin-top: 50px;
+}
+.filter {
+	float: left;
+	width: 220px;
+}
+
+
+
+
+.catalog-item {
+	float: left;
+	margin-left: 20px;
+	width: 700px;
+}
+.catalog-sort {
+	min-height: 18px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #f7f3ec;
+}
+.catalog-sort ul {
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+}
+.catalog-sort ul > li {
+	display: inline-block;
+	list-style: none;
+
+}
+.catalog-sort span, 
+.catalog-sort a {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	color: #000000;
+	
+}
+.catalog-sort span {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.catalog-sort a {
+	opacity: 0.3;
+	border-bottom: 1px dotted #ee3643;
+}
+.catalog-sort-prise {
+	margin-left: 120px;
+}
+.catalog-sort-type {
+	margin-left: 70px;
+}
+.catalog-sort-functional {
+	margin-left: 65px;
+}
+a.catalog-sort-btn {
+	display: block;
+	opacity: 1;
+	border: 10px solid #c6c2bd;
+	border-top-width: 0;
+	border-left-width: 5px;
+	border-right-width: 5px;
+	border-right-color: transparent;
+	border-left-color: transparent; 
+}
+a.catalog-sort-top {
+	margin-left: 46px;
+}
+a.catalog-sort-bottom {
+	margin-left: 20px;
+	transform: rotate(180deg);
+}
+.catalog-sort a:hover {
+	color: #000000;
+	border-bottom: 1px solid #ee3643;
+	opacity: 1;
+}
+.catalog-sort a:focus {
+	color: #ee3643;
+	border: none;
+	opacity: 1;
+}
+a.catalog-sort-btn:hover {
+	border: 10px solid #000000;
+	border-top-width: 0;
+	border-left-width: 5px;
+	border-right-width: 5px;
+	border-right-color: transparent;
+	border-left-color: transparent; 
+}
+a.catalog-sort-btn:focus {
+	border: 10px solid #ee3643;
+	border-top-width: 0;
+	border-left-width: 5px;
+	border-right-width: 5px;
+	border-right-color: transparent;
+	border-left-color: transparent; 
+}
+.pagination-catalog {
+	margin-top: 55px;
+	margin-left: 240px;
+	font-size: 0;
+}
+.pagination-catalog a {
+	display: inline-block;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: 10px;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	color: #000000;
+	border: 1px solid #e5e5e5;
+	border-radius: 2px;
+}
+.pagination-catalog .next {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+a.this-page {
+	background: #ee3643;
+	border-color: #ee3643;
+	color: #ffffff;
+}
+.pagination-catalog a:hover {
+	border-color: #bdc6ca;
+}
+.pagination-catalog a:active {
+	border-color: #ee3643;
 }
