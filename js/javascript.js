@@ -3,8 +3,11 @@
 	var modalContentClose = document.querySelector(".modal-content .modal-content-close");
 	var modalOverlay = document.querySelector(".modal-overlay");
 	var map = document.querySelector(".map-mini");
-	var modalContentMap = document.querySelector(".modal-content-map")
-	var mapClose = document.querySelector(".modal-content-close")
+	var modalContentMap = document.querySelector(".modal-content-map");
+	var mapClose = document.querySelector(".modal-content-close");
+	var buy = document.querySelector(".buy");
+	var addGoods = document.querySelector(".add-goods");
+	var addGoodsClose = document.querySelector(".add-goods .modal-content-close");
 
 
 writeToUs.addEventListener("click", function(event) {
@@ -25,5 +28,15 @@ map.addEventListener("click", function(event) {
 mapClose.addEventListener("click", function(event) {
 	event.preventDefault();
 	modalContentMap.classList.remove("modal-content-map-show");
+	modalOverlay.classList.remove("modal-overlay-show");
+});
+buy.addEventListener("click", function(event) {
+	event.preventDefault();
+	addGoods.classList.add("add-goods-show");
+	modalOverlay.classList.add("modal-overlay-show");
+});
+addGoodsClose.addEventListener("click", function(event) {
+	event.preventDefault();
+	addGoods.classList.remove("add-goods-show");
 	modalOverlay.classList.remove("modal-overlay-show");
 });

@@ -11,7 +11,7 @@
 		<header class="main-header">
 			<div class="container">
 				<div class="order-menu fixclear">
-					<div class="logo">ТЕХНОМАРТ</div>
+					<a href="index.html" class="logo">ТЕХНОМАРТ</a>
 					<form class="icon-search">
 						<input type="search" name="search" class="search" placeholder="Поиск:"> 
 					</form>
@@ -79,22 +79,24 @@
 									<input type="namber" name="namber-max" value="3000">
 								</div>
 							</div>
-							<div>
-								<h3>ПРОИЗВОДИТЕЛИ:</h3>
-								<label><input type="checkbox" name="BOSCH">BOSCH</label>
-								<label><input type="checkbox" name="ИНТЕРСКОЛ">ИНТЕРСКОЛ</label>
-								<label><input type="checkbox" name="MAKITA">MAKITA</label>
-								<label><input type="checkbox" name="DEWALT">DEWALT</label>
-								<label><input type="checkbox" name="HITACHI">HITACHI</label>
+							<div class="filter-position filter-checkbox">
+								<h3 class="h3-style">ПРОИЗВОДИТЕЛИ:</h3>
+								<div class="checkbox-group">
+									<label><input type="checkbox" name="BOSCH"><span class="checkbox-indicator"></span>BOSCH</label>
+									<label><input type="checkbox" name="ИНТЕРСКОЛ"><span class="checkbox-indicator"></span>ИНТЕРСКОЛ</label>
+									<label><input type="checkbox" name="MAKITA"><span class="checkbox-indicator"></span>MAKITA</label>
+									<label><input type="checkbox" name="DEWALT"><span class="checkbox-indicator"></span>DEWALT</label>
+									<label><input type="checkbox" name="HITACHI"><span class="checkbox-indicator"></span>HITACHI</label>
+								</div>								
 							</div>
-							<div>
-								<h3>ПИТАНИЕ:</h3>
-								<label><input type="radio" name="">АККУМУЛЯТОРНЫЕ</label>
-								<label><input type="radio" name="">СЕТЕВЫЕ</label>
+							<div class="filter-position filter-radio">
+								<h3 class="h3-style">ПИТАНИЕ:</h3>
+								<div class="radio-group">
+									<label><input type="radio" name="electric-power" value="АККУМУЛЯТОРНЫЕ" checked><span class="radio-indicator"></span>АККУМУЛЯТОРНЫЕ</label>
+									<label><input type="radio" name="electric-power" value="СЕТЕВЫЕ"><span class="radio-indicator"></span>СЕТЕВЫЕ</label>
+								</div>								
 							</div>
-							<div>
-								<a href="#">ПОКАЗАТЬ</a>
-							</div>
+							<batton type="submite" class="filter-btn">ПОКАЗАТЬ</batton>
 						</form>
 					</section>
 					<section class="catalog-item">
@@ -114,7 +116,7 @@
 									<img src="img/snippet-18927.png" width="127" height="113" alt="Перфоратор BOSCH BFG 3000">
 								</div>
 								<div class="goods-shade">
-									<a href="#">КУПИТЬ</a>
+									<a href="#" class="buy">КУПИТЬ</a>
 									<a href="#">В ЗАКЛАДКИ</a>
 								</div>
 								<h3>Перфоратор BOSCH BFG 3000</h3>
@@ -230,11 +232,11 @@
 		<footer class="footer-main footer-main-top">
 			<div class="container">
 				<div class="footer-меню-first fixclear">
-					<div class="logo">ТЕХНОМАРТ</div>
+					<a href="index.html" class="logo">ТЕХНОМАРТ</a>
 					<ul>
 						<li><a href="#">Компания</a></li>
 						<li><a href="#">Новости</a></li>
-						<li><a href="#">Каталог</a></li>
+						<li><a href="catalog.html">Каталог</a></li>
 						<li><a href="#">Доставка</a></li>
 						<li><a href="#">Контакты</a></li>
 					</ul>
@@ -274,30 +276,17 @@
 				</div>
 			</div>
 		</footer>
-		<div class="modal-content-map">
-			<batton class="modal-content-close" type="batton" title="Закрить"></batton>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2826.430448215261!2d30.316864232929966!3d59.93897616426187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0ZbRjywgMTkxMTg2!5e0!3m2!1suk!2sua!4v1492457828233" width="940" height="445" frameborder="0" style="border:0" allowfullscreen></iframe>
-		</div>
 		<div class="modal-overlay"></div>
-		<div class="modal-content">
+		<div class="modal-content add-goods">
 			<batton class="modal-content-close" type="batton" title="Закрить"></batton>
-			<form action="#" method="post">
-				<div class="form-position fixclear">
-					<div class="form-name">
-						<label for="name">Ваше имя:</label>
-						<input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста">
-					</div>
-					<div class="form-email">
-						<label for="email">Ваш e-mail:</label>
-						<input type="email" name="email" id="email" placeholder="Для отправки ответа">
-					</div>
-					<div class="form-comment">
-						<label for="comment">Текст письма</label>
-						<textarea name="comment" id="comment" placeholder="В свободной форме"></textarea>
-					</div>
-				</div>
-				<a href="#" class="btn form-btn">ОТПРАВИТЬ</a>
-			</form>
+			<div class="title-add-goods">
+				<span class="img-add-goods"></span>
+				<span class="text-add-goods">Товар добавлен в корзину!</span>
+			</div>
+			<div class="btn-add-goods">
+				<a href="#" class="btn">ОФОРМИТЬ ЗАКАЗ</a>
+				<a href="#" class="btn btn-2">ПРОДОЛЖИТЬ ПОКУПКИ</a>			
+			</div>
 		</div>
 	<script src="js/javascript.js"></script>
 	</body>
